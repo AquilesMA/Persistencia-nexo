@@ -1,1 +1,43 @@
-# Persistencia-nexo
+# Persistência Nexo
+
+Modelagem da camada de **persistência de dados** da plataforma **Nexo** — plataforma integrada para gestão de serviços psicológicos, dividida em Aplicação Web (Administrador, Atendente, Psicólogo) e Aplicativo Mobile (Paciente, Responsável).
+
+Este repositório reúne o **Dossiê de Modelagem de Persistência**: DER lógico, modelo relacional, normalização, dicionário de dados, mapeamento objeto-relacional e a verificação de coerência entre classes, DER e tabelas.
+
+> Trabalho da **AV3** da disciplina de **Modelagem Orientada a Objetos** — Centro Universitário Jorge Amado (UNIJORGE), prof. MSc Celso Barreto.
+>
+> Parte do projeto **Nexo**: veja o dossiê completo (requisitos, casos de uso, diagrama de classes) em [nexo-modelagem](https://github.com/devcaline/nexo-modelagem).
+
+## Papel neste repositório
+
+Autoria da camada de persistência (coluna "05 — Persistência" do Trello do grupo), com base no diagrama de classes de domínio (Etapa 04) e nos 9 módulos do sistema: Acesso e Permissões, Pessoas e Vínculos, Agenda, Atendimento, Recorrência, Financeiro, Lista de Espera, Documentos e Comunicação.
+
+## Documentos
+
+| # | Documento | Conteúdo |
+|---|-----------|----------|
+| 01 | [Modelo Relacional](docs/01-Modelo%20Relacional%20-%20Nexo.pdf) | As 25 tabelas, colunas, tipos, restrições, cardinalidades, tratamento de N:N, estratégia de herança e integridade referencial |
+| 02 | [Normalização e Justificativas](docs/02-Normalizacao%20e%20Justificativas-nexo.pdf) | Dependências funcionais e verificação de 1FN, 2FN e 3FN para as 25 tabelas |
+| 03 | [Dicionário de Dados](docs/03-Dicionario%20de%20Dados%20-nexo.pdf) | Descrição detalhada de cada atributo, tipo e restrição |
+| 04 | [Mapeamento Objeto-Relacional](docs/04-Mapeamento%20Objeto-Relacional-nexo.pdf) | Correspondência entre as classes do diagrama de domínio e as tabelas do banco |
+| 05 | [Coerência Classes ↔ DER ↔ Modelo Relacional](docs/05-Coerencia%20Classes-DER-Relacional-nexo.pdf) | Verificação cruzada garantindo consistência entre os três artefatos |
+
+Cada documento está disponível em `.docx` (editável) e `.pdf` (leitura).
+
+## Diagramas
+
+| Diagrama | Imagem |
+|----------|--------|
+| DER lógico | [ver](diagramas/DER-logico.png) |
+
+## Decisão estrutural importante
+
+Não há herança `usuario → subtipos`. A tabela `usuario` é genérica; `paciente` e `psicologo` são tabelas independentes, cada uma com FK opcional para `usuario`. "Responsável" não é uma tabela de pessoa nem um perfil — é a tabela `vinculo_responsabilidade`, ligando um `usuario` (papel responsável) a um `paciente` (papel dependente).
+
+## Estrutura
+
+```
+Persistencia-nexo/
+├── docs/            # documentos de modelagem (docx e pdf)
+└── diagramas/       # diagramas exportados como imagem
+```
