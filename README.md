@@ -4,7 +4,7 @@ Modelagem da camada de **persistência de dados** da plataforma **Nexo** — pla
 
 Este repositório reúne o **Dossiê de Modelagem de Persistência**: DER lógico, modelo relacional, normalização, dicionário de dados, mapeamento objeto-relacional e a verificação de coerência entre classes, DER e tabelas.
 
-> Trabalho da **AV3** da disciplina de **Modelagem Orientada a Objetos** — Centro Universitário Jorge Amado (UNIJORGE), prof. Celso Barreto.
+> Trabalho da **AV3** da disciplina de **Análise Orientada a Objetos** — Centro Universitário Jorge Amado (UNIJORGE), prof. Celso Barreto.
 
 
 ## Papel neste repositório
