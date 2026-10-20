@@ -4,9 +4,8 @@ Modelagem da camada de **persistência de dados** da plataforma **Nexo** — pla
 
 Este repositório reúne o **Dossiê de Modelagem de Persistência**: DER lógico, modelo relacional, normalização, dicionário de dados, mapeamento objeto-relacional e a verificação de coerência entre classes, DER e tabelas.
 
-> Trabalho da **AV3** da disciplina de **Modelagem Orientada a Objetos** — Centro Universitário Jorge Amado (UNIJORGE), prof. MSc Celso Barreto.
->
-> Parte do projeto **Nexo**: veja o dossiê completo (requisitos, casos de uso, diagrama de classes) em [nexo-modelagem](https://github.com/devcaline/nexo-modelagem).
+> Trabalho da **AV3** da disciplina de **Modelagem Orientada a Objetos** — Centro Universitário Jorge Amado (UNIJORGE), prof. Celso Barreto.
+
 
 ## Papel neste repositório
 
@@ -30,9 +29,6 @@ Cada documento está disponível em `.docx` (editável) e `.pdf` (leitura).
 |----------|--------|
 | DER lógico | [ver](diagramas/DER-logico.png) |
 
-## Decisão estrutural importante
-
-Não há herança `usuario → subtipos`. A tabela `usuario` é genérica; `paciente` e `psicologo` são tabelas independentes, cada uma com FK opcional para `usuario`. "Responsável" não é uma tabela de pessoa nem um perfil — é a tabela `vinculo_responsabilidade`, ligando um `usuario` (papel responsável) a um `paciente` (papel dependente).
 
 ## Estrutura
 
