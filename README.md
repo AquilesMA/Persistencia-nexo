@@ -9,7 +9,7 @@ Este repositório reúne o **Dossiê de Modelagem de Persistência**: DER lógic
 
 ## Papel neste repositório
 
-Autoria da camada de persistência (coluna "05 — Persistência" do Trello do grupo), com base no diagrama de classes de domínio (Etapa 04) e nos 9 módulos do sistema: Acesso e Permissões, Pessoas e Vínculos, Agenda, Atendimento, Recorrência, Financeiro, Lista de Espera, Documentos e Comunicação.
+Camada de persistência, com base no diagrama de classes de domínio e nos 9 módulos do sistema: Acesso e Permissões, Pessoas e Vínculos, Agenda, Atendimento, Recorrência, Financeiro, Lista de Espera, Documentos e Comunicação.
 
 ## Documentos
 
